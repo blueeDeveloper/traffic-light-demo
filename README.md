@@ -1,19 +1,16 @@
-# traffic-light-demo
-Smart Traffic Signal Controller
+# React + Vite
 
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-we have built a functional traffic light simulation with the following key features:
+Currently, two official plugins are available:
 
-State-Driven Logic: We used useState to track the active light and toggle between "Auto" and "Manual" modes.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-Advanced Timing Control: We transitioned from a fixed setInterval to a dynamic setTimeout approach. This allowed us to implement specific durations for each phase: 3 seconds for Red, 5 seconds for Green, and 1 seconds for Orange.
+## React Compiler
 
-Logical vs. Visual Separation: We introduced two separate arrays to manage the app:
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-sequence: Handles the specific logical flow you requested (Red → Green → Orange).
+## Expanding the ESLint configuration
 
-visualOrder: Ensures the physical layout in the UI remains the standard Red (top), Orange (middle), Green (bottom).
-
-Infinite Looping: We implemented the modulo operator (%) to ensure that the light sequence automatically resets to the beginning of the array without errors.
-
-Memory Management: We utilized useRef to store the timer ID, ensuring we can safely clear the background processes when switching modes or closing the app, preventing memory leaks and erratic flashing.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
