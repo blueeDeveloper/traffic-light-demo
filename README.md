@@ -13,3 +13,7 @@ visualOrder: Ensures the physical layout in the UI remains the standard Red (top
 Infinite Looping: We implemented the modulo operator (%) to ensure that the light sequence automatically resets to the beginning of the array without errors.
 
 Memory Management: We utilized useRef to store the timer ID, ensuring we can safely clear the background processes when switching modes or closing the app, preventing memory leaks and erratic flashing.
+
+
+https://github.com/user-attachments/assets/61a55530-f6dc-4126-ae25-2b0ab072890b
+
